@@ -5,6 +5,7 @@ import LoanOption from './Pages/LoanOption';
 import Status from './Pages/Status';
 import VoiceChat from './Pages/VoiceChat';
 import UploadDoc from './Pages/UploadDoc';
+import AIChatPage from './Pages/AIChatPage/AIChatPage';
 
 function App() {
   return (<BrowserRouter>
@@ -14,6 +15,8 @@ function App() {
       <Route path='/upload-doc' element={<UploadDoc />} />
       <Route path='/voice' element={<VoiceChat />} />
       <Route path='/status' element={<Status />} />
+      <Route path='/chat' element={<AIChatPage />} />
+
     </Routes>
   </BrowserRouter>
 
