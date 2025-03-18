@@ -6,7 +6,7 @@ import Navbar from "../../Modules/Navbar/Navbar";
 import Camera from "../../Modules/Camera/Camera";
 
 const CoversationList = [
-  "Hi I m your AI Assistant , name Zazzy and I'm here to help you. Please introduce yourself.",
+  "Hi I m your AI Assistant , name Zaazzy and I'm here to help you. Please introduce yourself.",
   "What is your mobile number & email?",
   "Where do you currently live?",
   "Are you employed? If yes, where do you work?",
@@ -22,7 +22,7 @@ const conversationStateConfig = {
 
 const AIChatPage = () => {
   const navigate = useNavigate();
-  const [showNextButton, setShowNextButton] = useState(true);
+  const [showNextButton, setShowNextButton] = useState(false);
   const [start, setStart] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [completedConversation, setCompletedConversation] = useState([]);

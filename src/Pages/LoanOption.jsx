@@ -21,14 +21,17 @@ const LoanOption = () => {
         }
     }, []);
 
+
+
     return (
         <div className="loanOp-Main">
             <Navbar />
-
             <Camera />
             <div className="loanOpt-container">
-                <div className="l-opt-q1">How this process works?</div>
+                <div className="l-opt-q1">How this process <span className="loan-selected-green"> works?</span></div>
                 <VideoPlayer />
+
+
                 <div id="loanCard"><Cards /></div>
             </div>
 

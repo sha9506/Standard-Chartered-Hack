@@ -22,6 +22,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    gap: 10px;
 }
 
 .video-player-play-button,
@@ -55,13 +56,14 @@
 }
 
 .video-player-skip-button {
-    background: #ff6347;
+    background: black;
     border-radius: 5px;
     padding: 5px 10px;
     color: white;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .video-player-skip-button:hover {
-    background: #ff4537;
+    background: #37D100;
 }

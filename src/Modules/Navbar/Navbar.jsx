@@ -19,13 +19,13 @@ const Navbar = () => {
     return (
         <div className={`navigation-wrap bg-light ${scroll ? "scroll-on" : "start-style"}`}>
             <div className="container">
-                <nav className="navbar navbar-expand-md navbar-light">
+                <nav className="navbar">
                     <a className="navbar-brand" href="./">
                         <img className="logo-image" src={logo} alt="logo" />
                     </a>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div className="collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto">
-                            <li className="nav-item active">
+                            <li className="nav-item">
                                 <a className="nav-link" href="./">Home</a>
                             </li>
                             <li className="nav-item">
@@ -33,9 +33,6 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="./loanOption?a=b">Loan Type</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Queries</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Contact</a>
