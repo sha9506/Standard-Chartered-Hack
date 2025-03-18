@@ -1,0 +1,89 @@
+/* body {
+    font-family: "Nunito", sans-serif;
+} */
+
+.upload-doc-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upload-doc-instructions {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.upload-doc-file-list {
+    list-style: none;
+    padding: 0;
+}
+
+.upload-doc-file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 14px;
+}
+
+.upload-doc-file-item:last-child {
+    border-bottom: none;
+}
+
+.upload-doc-file-details {
+    display: flex;
+    align-items: center;
+}
+
+.upload-doc-icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 12px;
+}
+
+.upload-doc-file-name {
+    font-weight: 600;
+}
+
+.upload-doc-file-size {
+    font-size: 12px;
+    color: #666;
+}
+
+.upload-doc-upload-btn,
+.upload-doc-remove-btn {
+    background: none;
+    border: none;
+    color: #5e94c3;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.upload-doc-upload-btn:hover,
+.upload-doc-remove-btn:hover {
+    color: #3a6b8a;
+}
+
+.upload-doc-submit-btn {
+    background: #5e94c3;
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.upload-doc-submit-btn:hover {
+    background: #3a6b8a;
+}

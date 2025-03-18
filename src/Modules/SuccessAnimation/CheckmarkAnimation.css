@@ -1,0 +1,108 @@
+:root {
+    --green: #37D100;
+    --white: #fff;
+    --curve: cubic-bezier(0.42, 0, 0.275, 1.155);
+    --time: 1.4s;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+} */
+
+/* Center everything */
+.checkmark-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    animation: grow var(--time) var(--curve) both;
+}
+
+@keyframes grow {
+
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+/* Make SVG take up 70% of the screen */
+.checkmark {
+    width: 70vw;
+    height: 70vw;
+    max-width: 500px;
+    max-height: 500px;
+    position: relative;
+    animation: checkmark 5.6s var(--curve) both;
+}
+
+/* Make checkmark bigger */
+.checkmark__check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate3d(-50%, -50%, 0);
+    fill: var(--white);
+    width: 70%;
+    height: 70%;
+}
+
+/* Rotating Background */
+.checkmark__back {
+    animation: rotate 35s linear infinite;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes checkmark {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    10%,
+    50%,
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Success Message */
+.success-text {
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--green);
+}

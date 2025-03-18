@@ -1,0 +1,123 @@
+.ai-voice {
+    --base-scale: 1.4;
+    --s: 40vmin;
+    --p: calc(var(--s) / 4);
+    width: var(--s);
+    aspect-ratio: 1;
+    padding: var(--p);
+    display: grid;
+    place-items: center;
+    position: relative;
+    border-radius: 50%;
+    transform: scale(var(--base-scale));
+}
+
+:root {
+    --count: 4;
+    --radius: 6vmin;
+}
+
+@keyframes ai-voice-animation {
+    from {
+        --a: 360deg;
+        --l: 0.35;
+        --o: 1;
+    }
+
+    30% {
+        --l: 1.5;
+    }
+
+    70% {
+        --o: 0.4;
+        --l: 0.05;
+    }
+
+    98% {
+        --o: 0.7;
+    }
+
+    to {
+        --a: 0deg;
+        --l: 0.35;
+        --o: 1;
+    }
+}
+
+.ai-voice-c {
+    opacity: 0.9;
+    position: absolute;
+    width: 10vmin;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    --offset-per-item: calc(360deg / var(--count));
+    --current-angle-offset: calc(var(--offset-per-item) * var(--i) + var(--a));
+    translate: calc(cos(var(--current-angle-offset)) * var(--radius) + var(--x, 0)) calc(sin(var(--current-angle-offset)) * var(--radius) * -1);
+    scale: calc(0.6 + var(--l));
+    animation: ai-voice-animation 5.5s cubic-bezier(0.45, -0.35, 0.16, 1.5) infinite;
+    transition: opacity 0.3s linear;
+    opacity: var(--o, 1);
+}
+
+.ai-voice-c1 {
+    background: radial-gradient(50% 50% at center, #02213c, #012a22);
+    /* Blue to Green */
+    width: 16vmin;
+}
+
+.ai-voice-c2 {
+    background: radial-gradient(50% 50% at center, #1576aa, #0c7940);
+    /* Teal to Green */
+    width: 15vmin;
+}
+
+.ai-voice-c3 {
+    background: radial-gradient(50% 50% at center, #6ae2f2, #005c2e);
+    /* Light Blue to Dark Green */
+    width: 5vmin;
+    opacity: 0.6;
+}
+
+.ai-voice-c4 {
+    background: #00796b;
+    /* Deep Teal */
+}
+
+.ai-voice-container {
+    overflow: hidden;
+    background: #81c784;
+    /* Light Green */
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.ai-voice-glass {
+    box-shadow: 0 0 8px rgba(100, 181, 246, 0.6), 0 0 16px rgba(56, 142, 60, 0.4);
+    /* Blue & Green Glow */
+    position: absolute;
+    --w: 0.5vmin;
+    inset: calc(var(--p) - var(--w));
+    border-radius: 50%;
+    backdrop-filter: blur(1.3vmin);
+    background: radial-gradient(10vmin at 70% 30%, rgba(255, 255, 255, 0.7), transparent);
+}
+
+@keyframes ai-voice-breathing {
+
+    0%,
+    100% {
+        transform: scale(calc(var(--base-scale) * var(--min-scale)));
+    }
+
+    50% {
+        transform: scale(calc(var(--base-scale) * var(--max-scale)));
+    }
+}
+
+.ai-voice-breathing {
+    animation: ai-voice-breathing 2s infinite ease-in-out;
+}

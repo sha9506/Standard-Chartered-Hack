@@ -1,0 +1,74 @@
+h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+
+.feature-section-img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+.feature-section-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.feature-section-left {
+    text-align: right;
+    margin-top: 100px;
+}
+
+.feature-section-right {
+    text-align: left;
+    margin-top: 100px;
+}
+
+.feature-section-middle {
+    text-align: center;
+    padding: 100px;
+}
+
+.feature-section-text div {
+    padding-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .feature-section-container {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .feature-section-middle {
+        order: 0 !important;
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .feature-section-left,
+    .feature-section-right {
+        margin-top: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .feature-section-left {
+        order: 1;
+    }
+
+    .feature-section-right {
+        order: 2;
+    }
+}
+
+/* React Icons Styles */
+.feature-section-icon {
+    color: black;
+    font-size: 30px;
+}
