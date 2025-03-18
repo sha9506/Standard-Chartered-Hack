@@ -29,11 +29,6 @@ const LoanDoc = {
         { "label": "KYC", "key": "kyc" },
         { "label": "Income Proof", "key": "incomeProof" }
     ],
-    "goldLoan": [
-        { "label": "Aadhaar", "key": "aadhaar" },
-        { "label": "PAN", "key": "pan" },
-        { "label": "Gold Purity Certificate", "key": "goldPurityCertificate" }
-    ],
     "loanAgainstProperty": [
         { "label": "Property Papers", "key": "propertyPapers" },
         { "label": "Aadhaar", "key": "aadhaar" },

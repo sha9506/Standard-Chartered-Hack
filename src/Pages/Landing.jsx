@@ -1,29 +1,22 @@
-import logo from '../Assets/logo.png';
-import { useNavigate } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
+import Navbar from "../Modules/Navbar/Navbar";
+import "./Landing.css";
 
 const Landing = () => {
+    const [isLoading, setIsLoading] = useState(true);
 
-    const navigate = useNavigate();
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 100);
+    }, []);
 
     return (
-        <div className="landing">
-            <div className="landing-nav">
-                <div className='navbar-landing'>
-                    <img src={logo} alt="logo" className='logo' />
-                </div>
-            </div>
-
-            <div className='landing-intro'>
-                <div className='l-quote'>
-                    From here, possibilities are everywhere
-                </div>
-                <div className='l-small-quote'>
-                    We’re here to connect your potential to possibilities in the world’s most <br /> dynamic markets.
-                </div>
-                <button className='l-button' onClick={() => { navigate('/loanOption') }} >Learn How > </button>
-            </div>
+        <div id="main" className={isLoading ? "is-loading" : ""}>
+            <Navbar />
+            <h1>Standard <span style={{ color: "#37D100" }}>Chartered</span> </h1>
         </div>
-    )
-}
+    );
+};
+
 export default Landing;

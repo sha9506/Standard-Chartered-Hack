@@ -1,0 +1,64 @@
+#main {
+    background: #445;
+    color: #FFF;
+    margin: 0;
+}
+
+#main {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.66) 100%, transparent),
+        url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/336999/shinokubo_test.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ",
+        Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 5rem;
+    display: inline-block;
+    padding: 1rem;
+    font-weight: 900;
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.5s ease, opacity 1s ease;
+    color: #007CFF;
+}
+
+.is-loading h1 {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+h1:before,
+h1:after {
+    height: 4px;
+    width: 100%;
+    content: "";
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    transition: width 0.4s ease;
+    transition-delay: 0.8s;
+}
+
+h1:before {
+    top: 0;
+    left: 0;
+}
+
+h1:after {
+    bottom: 0;
+    right: 0;
+}
+
+.is-loading h1:before,
+.is-loading h1:after {
+    width: 0;
+}

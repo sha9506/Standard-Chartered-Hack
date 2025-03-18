@@ -1,11 +1,9 @@
 import FileUpload from "../Modules/FileUpload/FileUpload";
-import Navbar from "../Modules/Navbar"
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Navbar from "../Modules/Navbar/Navbar";
 
 
 const UploadDoc = () => {
-    const navigate = useNavigate();
     const [selectedLoan, setSelectedLoan] = useState("");
 
     useEffect(() => {
@@ -17,7 +15,7 @@ const UploadDoc = () => {
     }, []);
 
     return (
-        <div className="UploadDoc-Main">
+        <div className="UploadDoc-Main page-margin">
             <Navbar />
             <div className="voice-Main-Head">
                 The loan you have selected is

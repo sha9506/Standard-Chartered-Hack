@@ -2,7 +2,7 @@ import {
     FaMoneyBillWave, FaHandHoldingUsd, FaRegCreditCard, FaPiggyBank,
     FaHome, FaTools, FaBuilding, FaIndustry,
     FaCar, FaGasPump, FaGraduationCap, FaBook,
-    FaCoins, FaBalanceScale, FaLandmark, FaFileContract
+    FaBalanceScale, FaLandmark, FaFileContract
 } from "react-icons/fa";
 
 const LoanDetails = {
@@ -35,12 +35,6 @@ const LoanDetails = {
         { icon: <FaBook className="feature-section-icon" />, title: "Loan Amount", description: "Students can avail loans ranging from ₹50,000 to ₹50,00,000, depending on the course, university, and co-applicant's financial strength." },
         { icon: <FaRegCreditCard className="feature-section-icon" />, title: "Repayment Tenure", description: "Repayment tenure extends from 5 to 15 years, with a moratorium period until course completion and job acquisition." },
         { icon: <FaHandHoldingUsd className="feature-section-icon" />, title: "Eligibility", description: "Eligibility requires proof of admission, a co-applicant’s financial stability, and necessary KYC documents such as Aadhaar, PAN, and bank statements." }
-    ],
-    goldLoan: [
-        { icon: <FaCoins className="feature-section-icon" />, title: "Purpose", description: "Gold loans offer quick financial assistance by pledging gold jewelry, providing instant funds with minimal documentation and flexible repayment options." },
-        { icon: <FaBalanceScale className="feature-section-icon" />, title: "Loan Amount", description: "The loan amount depends on the weight and purity of the pledged gold, ranging from ₹10,000 to ₹1 Cr." },
-        { icon: <FaPiggyBank className="feature-section-icon" />, title: "Repayment Tenure", description: "Borrowers can choose a repayment tenure of 6 to 36 months, with multiple repayment options, including interest-only EMIs or bullet repayments." },
-        { icon: <FaMoneyBillWave className="feature-section-icon" />, title: "Eligibility", description: "Eligibility is simple, requiring only KYC documents like Aadhaar and PAN, along with a gold purity certificate." }
     ],
     loanAgainstProperty: [
         { icon: <FaLandmark className="feature-section-icon" />, title: "Purpose", description: "A Loan Against Property (LAP) allows individuals to leverage their real estate assets to secure substantial funds for business, education, or medical needs." },

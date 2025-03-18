@@ -66,7 +66,7 @@ const Cards = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 col-sm-6" onClick={() => handleCardClick("Loan Against Property (LAP)")}>
+                    <div className="col-lg-4 col-sm-6" onClick={() => handleCardClick("Loan Against Property")}>
                         <div className="item">
                             <span className="icon feature_box_col_six"><FaCamera /></span>
                             <h6>Loan Against Property (LAP)</h6>

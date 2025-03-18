@@ -19,94 +19,12 @@ body::-webkit-scrollbar {
 
 
 
-/* LANDING PAGE  */
-.landing {
-  width: 1903px;
-  height: 1034px;
-  aspect-ratio: 720/517;
-  background: url('./Assets/background.jpeg') lightgray -150.222px 0px / 163.156% 100% no-repeat;
-  /* filter: brightness(50%);
-  background-blend-mode: darken; */
-}
-
-
-.ladning-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.landing-nav {
-  display: flex;
-  font-display: row;
-  justify-content: center;
-}
-
-.navbar-landing {
-  width: 1350px;
-  height: 87px;
-  border-radius: 0px 0px 30px 30px;
-  background: #ffffff;
-  padding: 5px;
-}
-
-.logo {
-  width: 200px;
-  height: 100px;
-}
-
-.landing-intro {
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-  justify-content: center;
-  align-items: center;
-}
-
-.l-quote {
-  width: 803px;
-  height: 174px;
-  color: #FFF;
-  text-align: center;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 500;
-}
-
-.l-small-quote {
-  width: 901px;
-  height: 39px;
-  flex-shrink: 0;
-  color: #FFF;
-  text-align: center;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
-.l-button {
-  width: 201px;
-  height: 57px;
-  flex-shrink: 0;
-  border-radius: 25px;
-  background: #007CFF;
-  border: 1px black;
-  color: #FFF;
-  text-align: center;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin-top: 50px;
-}
-
 /* LOAN OPTION  */
 
 .loanOp-Main {
   background-color: white;
   padding: 10px;
+  margin-top: 140px;
 }
 
 .loanOpt-container {
@@ -122,12 +40,13 @@ body::-webkit-scrollbar {
   flex-shrink: 0;
   color: #000;
   text-align: center;
-  font-size: 60px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   padding: 10px;
   margin: 10px;
+  margin-bottom: 10px;
 }
 
 .l-opt-video {
@@ -210,6 +129,10 @@ body::-webkit-scrollbar {
 
 .UploadDoc-Main {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .UploadDoc-Main-text {
@@ -222,4 +145,9 @@ body::-webkit-scrollbar {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+
+}
+
+.page-margin {
+  margin-top: 130px;
 }

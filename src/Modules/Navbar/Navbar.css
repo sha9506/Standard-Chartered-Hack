@@ -1,0 +1,128 @@
+/* Navbar Styles */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&subset=devanagari,latin-ext');
+
+/* body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #212112;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: all 200ms linear;
+} */
+
+/* Navigation */
+
+.container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.navigation-wrap {
+    position: fixed;
+    width: 70%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+    background: #fff;
+    box-shadow: 9px 19px 17.3px 3px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.start-header.scroll-on {
+    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    padding: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.collapse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 400px;
+}
+
+.navbar-brand img {
+    width: 150px;
+    height: 80px;
+    flex-shrink: 0;
+    aspect-ratio: 251/102;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+    width: 24px;
+    height: 17px;
+    background-image: none;
+    position: relative;
+    border-bottom: 1px solid #000;
+    transition: all 300ms linear;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+
+}
+
+.nav-link {
+    color: #000000 !important;
+    font-weight: 500;
+    transition: all 200ms linear;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.nav-item:hover .nav-link {
+    color: #007CFF !important;
+}
+
+.nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+
+.nav-item:hover .nav-link::after {
+    width: 50%;
+    left: 25%;
+}

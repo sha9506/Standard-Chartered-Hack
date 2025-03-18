@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import FeatureSection from "../Modules/LoanFeatureSection/FeatureSection";
-import Navbar from "../Modules/Navbar";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Modules/Navbar/Navbar";
 
 const VoiceChat = () => {
     const navigate = useNavigate();
@@ -16,7 +16,7 @@ const VoiceChat = () => {
     }, []);
 
     return (
-        <div className="voice-Main">
+        <div className="voice-Main page-margin">
             <Navbar />
             <div className="voice-Main-Head">
                 The loan you have selected is

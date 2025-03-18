@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./FeatureSection.css";
-import { FaInstagram, FaRocket, FaMusic, FaHeart } from "react-icons/fa";
 import AiVoiceAnimation from "../AiVoiceAnimation/AiVoiceAnimation";
 import LoanDetails from "../../DummyData/LoanDetails";
 
