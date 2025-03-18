@@ -1,6 +1,7 @@
 import FileUpload from "../Modules/FileUpload/FileUpload";
 import { useEffect, useState } from "react";
 import Navbar from "../Modules/Navbar/Navbar";
+import Camera from "../Modules/Camera/Camera";
 
 
 const UploadDoc = () => {
@@ -17,6 +18,7 @@ const UploadDoc = () => {
     return (
         <div className="UploadDoc-Main page-margin">
             <Navbar />
+            <Camera />
             <div className="voice-Main-Head">
                 The loan you have selected is
                 <span className="loan-selected-green"> {selectedLoan || "N/A"}</span>

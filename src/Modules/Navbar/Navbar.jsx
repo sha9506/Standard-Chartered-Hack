@@ -21,7 +21,7 @@ const Navbar = () => {
             <div className="container">
                 <nav className="navbar navbar-expand-md navbar-light">
                     <a className="navbar-brand" href="./">
-                        <img src={logo} alt="logo" />
+                        <img className="logo-image" src={logo} alt="logo" />
                     </a>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto">

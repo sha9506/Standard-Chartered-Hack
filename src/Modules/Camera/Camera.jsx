@@ -6,7 +6,14 @@ const Camera = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        if (isOpen && navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        if (isOpen) {
+            startCamera();
+            registerFace(); // Call API when camera opens
+        }
+    }, [isOpen]);
+
+    const startCamera = () => {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             navigator.mediaDevices.getUserMedia({ video: true })
                 .then((stream) => {
                     if (videoRef.current) {
@@ -17,16 +24,26 @@ const Camera = () => {
                     console.error("Error accessing the camera: ", err);
                 });
         }
-    }, [isOpen]);
+    };
+
+    const registerFace = () => {
+        const requestOptions = {
+            method: "POST",
+            redirect: "follow"
+        };
+
+        fetch("http://127.0.0.1:5000/register_face", requestOptions)
+            .then((response) => response.text())
+            .then((result) => console.log("Face Registered:", result))
+            .catch((error) => console.error("API Error:", error));
+    };
 
     return (
         <>
-            {/* Toggle Button */}
             <button className="camera-toggle-btn" onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? "Close Camera" : "Open Camera"}
             </button>
 
-            {/* Camera Modal */}
             {isOpen && (
                 <div className="camera-modal">
                     <div className="camera-header">

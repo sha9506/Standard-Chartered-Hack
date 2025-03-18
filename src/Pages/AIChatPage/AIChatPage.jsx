@@ -3,9 +3,10 @@ import ChatOutput from "../../Modules/ChatOutput/ChatOutput";
 import ChatBar from "../../Modules/ChatWindow/ChatWindow";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../Modules/Navbar/Navbar";
+import Camera from "../../Modules/Camera/Camera";
 
 const CoversationList = [
-  "Hi I m your AI Assistant name Zazzy and I'm here to help you. Please introduce yourself.",
+  "Hi I m your AI Assistant , name Zazzy and I'm here to help you. Please introduce yourself.",
   "What is your mobile number & email?",
   "Where do you currently live?",
   "Are you employed? If yes, where do you work?",
@@ -21,7 +22,7 @@ const conversationStateConfig = {
 
 const AIChatPage = () => {
   const navigate = useNavigate();
-  const [showNextButton, setShowNextButton] = useState(false);
+  const [showNextButton, setShowNextButton] = useState(true);
   const [start, setStart] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [completedConversation, setCompletedConversation] = useState([]);
@@ -92,6 +93,7 @@ const AIChatPage = () => {
   return (
     <div style={{ padding: "50px" }} className="page-margin">
       <Navbar />
+      <Camera />
       <ChatOutput completedConversation={completedConversation} />
       <div
         style={{
@@ -107,7 +109,7 @@ const AIChatPage = () => {
           }}
         >
           {
-            showNextButton ? <button onClick={() => { navigate('/upload-doc') }} style={{ padding: "20px 60px" }}>Continue</button> : <ChatBar />
+            showNextButton ? <button className="voice-Main-Head-Button" onClick={() => { navigate('/upload-doc') }} style={{ padding: "20px 60px" }}>Continue </button> : <ChatBar />
           }
 
 

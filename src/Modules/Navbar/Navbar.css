@@ -57,10 +57,15 @@
     gap: 400px;
 }
 
-.navbar-brand img {
+.navbar-brand {
     width: 150px;
     height: 80px;
-    flex-shrink: 0;
+    aspect-ratio: 251/102;
+}
+
+.logo-image {
+    width: 150px;
+    height: 80px;
     aspect-ratio: 251/102;
 }
 
