@@ -24,7 +24,7 @@ const VideoPlayer = () => {
     };
 
     const handleTamil = () => {
-        setVideoUrl("https://www.youtube.com/embed/dg5hfJG-B1Q");
+        setVideoUrl("https://www.youtube.com/embed/4G__rDntPqY");
     };
 
     const handleEnglish = () => {
