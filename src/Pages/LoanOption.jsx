@@ -3,6 +3,7 @@ import VideoPlayer from "../Modules/VideoPlayer/VideoPlayer";
 import Navbar from "../Modules/Navbar/Navbar";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Camera from "../Modules/Camera/Camera";
 
 
 
@@ -23,6 +24,8 @@ const LoanOption = () => {
     return (
         <div className="loanOp-Main">
             <Navbar />
+
+            <Camera />
             <div className="loanOpt-container">
                 <div className="l-opt-q1">How this process works?</div>
                 <VideoPlayer />
