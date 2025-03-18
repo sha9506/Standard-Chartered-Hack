@@ -4,27 +4,13 @@ import "./Camera.css";
 const Camera = () => {
     const videoRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
+    const streamUrl = "http://127.0.0.1:5000/video_feed";
 
     useEffect(() => {
         if (isOpen) {
-            startCamera();
             registerFace(); // Call API when camera opens
         }
     }, [isOpen]);
-
-    const startCamera = () => {
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices.getUserMedia({ video: true })
-                .then((stream) => {
-                    if (videoRef.current) {
-                        videoRef.current.srcObject = stream;
-                    }
-                })
-                .catch((err) => {
-                    console.error("Error accessing the camera: ", err);
-                });
-        }
-    };
 
     const registerFace = () => {
         const requestOptions = {
@@ -47,10 +33,15 @@ const Camera = () => {
             {isOpen && (
                 <div className="camera-modal">
                     <div className="camera-header">
-                        <h2 className="camera-title">Live Camera</h2>
+                        <h2 className="camera-title">Live Camera Stream</h2>
                         <button className="camera-close-btn" onClick={() => setIsOpen(false)}>✖</button>
                     </div>
-                    <video ref={videoRef} autoPlay playsInline className="camera-video"></video>
+                    {/* For MJPEG streams from Flask, we use an img tag instead of video */}
+                    <img
+                        src={streamUrl}
+                        alt="Video Stream"
+                        className="camera-video"
+                    />
                 </div>
             )}
         </>

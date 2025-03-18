@@ -22,7 +22,7 @@ const conversationStateConfig = {
 
 const AIChatPage = () => {
   const navigate = useNavigate();
-  const [showNextButton, setShowNextButton] = useState(false);
+  const [showNextButton, setShowNextButton] = useState(true);
   const [start, setStart] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [completedConversation, setCompletedConversation] = useState([]);
