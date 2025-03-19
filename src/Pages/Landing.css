@@ -62,3 +62,32 @@ h1:after {
 .is-loading h1:after {
     width: 0;
 }
+
+/* ...existing code... */
+
+/* ...existing code... */
+
+.get-started-btn {
+    background-color: #37D100;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, opacity 1s ease, transform 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1.2s; /* Appears after the title animation completes */
+  }
+    
+  .get-started-btn:hover {
+    background-color: #2ea800;
+  }
+  
+  .is-loading .get-started-btn {
+    opacity: 0;
+    transform: translateY(20px);
+  }

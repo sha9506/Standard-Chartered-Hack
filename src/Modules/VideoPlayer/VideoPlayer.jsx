@@ -20,7 +20,7 @@ const VideoPlayer = () => {
     };
 
     const handleHindi = () => {
-        setVideoUrl("https://www.youtube.com/embed/ffK9HUUkzNM");
+        setVideoUrl("https://www.youtube.com/embed/PobMVaKt9PM");
     };
 
     const handleTamil = () => {
