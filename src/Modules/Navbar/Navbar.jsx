@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from '../../Assets/logo.png';
 
 const Navbar = () => {
     const [scroll, setScroll] = useState(false);
+    const [isLogoLoaded, setIsLogoLoaded] = useState(false);
+
+    // Preload the logo image
+    useEffect(() => {
+        const img = new Image();
+        img.src = logo;
+        img.onload = () => setIsLogoLoaded(true);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,7 +30,13 @@ const Navbar = () => {
             <div className="container">
                 <nav className="navbar">
                     <a className="navbar-brand" href="./">
-                        <img className="logo-image" src={logo} alt="logo" />
+                        <div className="logo-placeholder"></div>
+                        <img 
+                            className={`logo-image ${!isLogoLoaded ? 'loading' : ''}`} 
+                            src={logo} 
+                            alt="logo"
+                            onLoad={() => setIsLogoLoaded(true)}
+                        />
                     </a>
                     <div className="collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto">
@@ -35,7 +50,7 @@ const Navbar = () => {
                                 <a className="nav-link" href="./loanOption?a=b">Loan Type</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contact</a>
+                                <a className="nav-link" href="./contact">Contact</a>
                             </li>
                         </ul>
                     </div>

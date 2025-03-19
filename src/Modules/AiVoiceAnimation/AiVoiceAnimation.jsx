@@ -1,54 +1,41 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./AiVoiceAnimation.css";
 
 const AiVoiceAnimation = () => {
     const aiRef = useRef(null);
-    const [isListening, setIsListening] = useState(false);
 
     useEffect(() => {
-        if (!navigator.mediaDevices?.getUserMedia) {
-            alert("Your browser does not support getUserMedia!");
-            return;
-        }
+        // Initialize animation parameters
+        const minBaseScale = 0.95;
+        const maxBaseScale = 1.1;
+        let animationFrameId;
 
-        navigator.mediaDevices.getUserMedia({ audio: true })
-            .then((stream) => {
-                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                const source = audioCtx.createMediaStreamSource(stream);
-                const analyser = audioCtx.createAnalyser();
+        // Simulate the animation without microphone access
+        const simulateAnimation = () => {
+            // Generate a slight random variation to simulate natural sound patterns
+            const randomFactor = Math.sin(Date.now() / 500) * 0.2 + 0.8;
+            
+            const minScale = minBaseScale * randomFactor;
+            const maxScale = maxBaseScale * randomFactor;
 
-                analyser.fftSize = 256;
-                source.connect(analyser);
+            if (aiRef.current) {
+                aiRef.current.style.setProperty("--min-scale", minScale.toFixed(2));
+                aiRef.current.style.setProperty("--max-scale", maxScale.toFixed(2));
+                aiRef.current.classList.add("ai-voice-breathing");
+            }
 
-                const dataArray = new Uint8Array(analyser.frequencyBinCount);
+            animationFrameId = requestAnimationFrame(simulateAnimation);
+        };
 
-                function animate() {
-                    requestAnimationFrame(animate);
-                    analyser.getByteFrequencyData(dataArray);
+        // Start simulation
+        simulateAnimation();
 
-                    let sum = dataArray.reduce((a, b) => a + b, 0);
-                    let average = sum / dataArray.length;
-                    let newScale = Math.max(0.1, Math.min(2, average / 128));
-
-                    const minScale = 1 - 0.05 * newScale;
-                    const maxScale = 1 + 0.1 * newScale;
-
-                    if (aiRef.current) {
-                        aiRef.current.style.setProperty("--min-scale", minScale.toFixed(2));
-                        aiRef.current.style.setProperty("--max-scale", maxScale.toFixed(2));
-                        aiRef.current.classList.add("ai-voice-breathing");
-                    }
-                }
-
-                animate();
-                setIsListening(true);
-            })
-            .catch((err) => {
-                console.error("Error accessing microphone:", err);
-                alert("Microphone access denied or an error occurred.");
-            });
-
-        return () => setIsListening(false);
+        // Cleanup animation frame on unmount
+        return () => {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+        };
     }, []);
 
     return (

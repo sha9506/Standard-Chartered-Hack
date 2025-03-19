@@ -128,8 +128,8 @@ body::-webkit-scrollbar {
 }
 
 .voice-Main-Head-Button {
-  width: 150px;
-  height: 37px;
+  width: 200px;
+  height: 50px;
   flex-shrink: 0;
   background: #007CFF;
   border: 1px;

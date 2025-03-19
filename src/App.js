@@ -6,6 +6,7 @@ import Status from './Pages/Status';
 import VoiceChat from './Pages/VoiceChat';
 import UploadDoc from './Pages/UploadDoc';
 import AIChatPage from './Pages/AIChatPage/AIChatPage';
+import Contact from './Pages/Contact';
 
 function App() {
   return (<BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
       <Route path='/voice' element={<VoiceChat />} />
       <Route path='/status' element={<Status />} />
       <Route path='/chat' element={<AIChatPage />} />
+      <Route path='/contact' element={<Contact />} />
 
     </Routes>
   </BrowserRouter>

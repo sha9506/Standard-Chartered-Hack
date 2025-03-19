@@ -70,7 +70,8 @@ const UploadDocFileUpload = () => {
         //     return;
         // }
         console.log("Uploaded Files:", files);
-        navigate('/status?status=success')
+        // Navigate to external URL instead of internal route
+        window.location.href = "https://sc-chatbot-pkzy.onrender.com/";
     };
 
     return (

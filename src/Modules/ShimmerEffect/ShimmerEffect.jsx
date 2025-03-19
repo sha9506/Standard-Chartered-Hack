@@ -16,10 +16,10 @@ const ShimmerEffect = () => {
             {/* Upload Button */}
             <button className="upload-button shimmer">Upload Doc &gt;</button>
 
-            {/* Content Grid */}
-            <div className="content-grid">
-                {/* Left Section */}
-                <div className="content-item">
+            {/* Content Grid - Staggered Layout */}
+            <div className="staggered-grid">
+                {/* Top Row */}
+                <div className="content-box">
                     <div className="icon shimmer"></div>
                     <h3>Purpose</h3>
                     <p>
@@ -29,13 +29,12 @@ const ShimmerEffect = () => {
                     </p>
                 </div>
 
-                {/* Center Section (Shimmer Circle) */}
-                <div className="content-item">
+                {/* Middle Row - Center */}
+                <div className="content-box center-item">
                     <div className="shimmer-circle shimmer"></div>
                 </div>
 
-                {/* Right Section */}
-                <div className="content-item">
+                <div className="content-box">
                     <div className="icon shimmer"></div>
                     <h3>Repayment Tenure</h3>
                     <p>
@@ -44,8 +43,8 @@ const ShimmerEffect = () => {
                     </p>
                 </div>
 
-                {/* Bottom Left Section */}
-                <div className="content-item">
+                {/* Bottom Row */}
+                <div className="content-box">
                     <div className="icon shimmer"></div>
                     <h3>Loan Amount</h3>
                     <p>
@@ -54,8 +53,7 @@ const ShimmerEffect = () => {
                     </p>
                 </div>
 
-                {/* Bottom Right Section */}
-                <div className="content-item">
+                <div className="content-box">
                     <div className="icon shimmer"></div>
                     <h3>Eligibility</h3>
                     <p>

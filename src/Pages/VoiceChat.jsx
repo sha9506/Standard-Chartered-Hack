@@ -28,7 +28,7 @@ const VoiceChat = () => {
             <div className="voice-Main-Head">Voice Chat</div>
             <div className="voice-Main-Head">
                 <VideoPopUp />
-                <button className="voice-Main-Head-Button" onClick={() => { navigate('/chat') }}>Chat Now > </button>
+                <button className="voice-Main-Head-Button" onClick={() => { navigate('/upload-doc') }}>Upload Documents </button>
 
             </div>
             <FeatureSection selectedLoan={selectedLoan} />

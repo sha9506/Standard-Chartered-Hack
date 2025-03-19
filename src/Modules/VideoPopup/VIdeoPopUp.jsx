@@ -38,7 +38,7 @@ const VideoPopUp = () => {
         <div>
             {/* Button to Open Video Popup */}
             <button className="VideoPopUp-open-button" onClick={handleOpen}>
-                Watch The Video To Learn More >
+                Watch The Video To Learn More
             </button>
 
             {/* Video Modal */}
